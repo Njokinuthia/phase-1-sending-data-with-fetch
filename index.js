@@ -1,7 +1,7 @@
-let userName = "steve"
-let userEmail = "steve@gmail.com"
+//let userName = "joy"
+//let userEmail = "steve@gmail.com"
 
-function submitData(userName, userEmail) {
+const submitData = (name, email)=> {
   return fetch(" http://localhost:3000/users", {
     method: "POST",
     headers: {
@@ -9,8 +9,8 @@ function submitData(userName, userEmail) {
       Accept: "application/json"
     },
     body:JSON.stringify({
-      userName,
-      userEmail
+      name: name,
+      email: email
     })
   })
   .then(resp=>resp.json())
@@ -18,6 +18,6 @@ function submitData(userName, userEmail) {
   .catch(error=>document.body.innerHTML = error.message);
 };
 
-submitData(userName,userEmail);
+submitData("wewewewew","jhsd44444bns");
 
 
